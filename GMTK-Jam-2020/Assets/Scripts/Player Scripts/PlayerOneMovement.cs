@@ -16,11 +16,25 @@ public class PlayerOneMovement : MonoBehaviour
     // Booleans for Jumping
     bool jump = false;
 
+    // Boolean for Triple Speed Event
     public bool tripleSpeed = false;
 
     // Update is called once per frame
     void Update()
     {
+        // Uses players input of A and D keys to move character in FixedUpdate
+        horizontalMove = Input.GetAxisRaw("p1Horizontal") * runSpeed;
+
+        // Uses players input of SpaceBar to make the character Jump
+        if (Input.GetButtonDown("P1Jump"))
+        {
+            jump = true;
+        }
+
+        // EVENTS TRIGGERED WHEN PLAYER SCORES A POINT
+
+        // Triple Speed Event
+
         switch (tripleSpeed)
         {
             case false:
@@ -29,14 +43,6 @@ public class PlayerOneMovement : MonoBehaviour
             case true:
                 runSpeed = 300f;
                 break;
-        }
-        // Uses players input of A and D keys to move character in FixedUpdate
-        horizontalMove = Input.GetAxisRaw("p1Horizontal") * runSpeed;
-
-        // Uses players input of SpaceBar to make the character Jump
-        if (Input.GetButtonDown("P1Jump"))
-        {
-            jump = true;
         }
     }
 
