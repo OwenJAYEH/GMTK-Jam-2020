@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerOneMovement : MonoBehaviour
 {
     // Initialized public variables for use inside of the inspector
         public CharacterController2D controller;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         // Uses players input of SpaceBar to make the character Jump
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("P1Jump"))
         {
             jump = true;
         }
