@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerOneMovement : MonoBehaviour
 {
     // Initialized public variables for use inside of the inspector
-        public CharacterController2D controller;
+        public PlayerOneCharacterController2D controller;
 
     // Initialized variables
         // Variable for player run speed
@@ -31,7 +31,7 @@ public class PlayerOneMovement : MonoBehaviour
                 break;
         }
         // Uses players input of A and D keys to move character in FixedUpdate
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("p1Horizontal") * runSpeed;
 
         // Uses players input of SpaceBar to make the character Jump
         if (Input.GetButtonDown("P1Jump"))

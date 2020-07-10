@@ -239,10 +239,10 @@ GameObject:
   m_Component:
   - component: {fileID: 151941645}
   - component: {fileID: 151941644}
-  - component: {fileID: 151941643}
-  - component: {fileID: 151941642}
-  - component: {fileID: 151941641}
   - component: {fileID: 151941640}
+  - component: {fileID: 151941642}
+  - component: {fileID: 151941643}
+  - component: {fileID: 151941641}
   m_Layer: 9
   m_Name: Player Two
   m_TagString: Untagged
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 151941639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a2a720426b553d4b98e1402aa19cf31, type: 3}
+  m_Script: {fileID: 11500000, guid: e8dce08dd984fa443b73036098a25154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 151941643}
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 151941639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73eec3c07db5624ba49f7ddb9003f22, type: 3}
+  m_Script: {fileID: 11500000, guid: ae890e8c98d06ac4c8f222579b597ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 800
