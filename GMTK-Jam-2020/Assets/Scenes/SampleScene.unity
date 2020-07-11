@@ -2890,8 +2890,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPlatCol: {fileID: 307152781}
-  DropEvent: 0
-  PlatformDropScript: {fileID: 103210427}
 --- !u!1 &1408318285
 GameObject:
   m_ObjectHideFlags: 0
