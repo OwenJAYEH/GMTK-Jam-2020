@@ -8,53 +8,65 @@ public class PlatformDrop : MonoBehaviour
 
     bool playerEnter = false;
 
-    public void StartOver()
+    bool DropEvent = false;
+
+    public void DropEventToggle()
     {
-        countDownTimer = 0f;
+        DropEvent = true;
     }
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "PlayerOne")
+        if (DropEvent == true)
         {
-            playerEnter = true;
+            if (col.gameObject.tag == "PlayerOne")
+            {
+                playerEnter = true;
+            }
+            if (col.gameObject.tag == "PlayerTwo")
+            {
+                playerEnter = true;
+            }
         }
-        if (col.gameObject.tag == "PlayerTwo")
-        {
-            playerEnter = true;
-        }
+        
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        countDownTimer = 0f;
+        if (DropEvent == true)
+        {
+            countDownTimer = 0f;
+        }
     }
 
     void Update()
     {
-        if (countDownTimer < -2f)
+        if (DropEvent == true)
         {
-            playerEnter = false;
-            countDownTimer = 2f;
-        }
+            if (countDownTimer < -2f)
+            {
+                playerEnter = false;
+                countDownTimer = 2f;
+            }
 
-        if (countDownTimer < 0f)
-        {
-            GetComponent<Renderer>().enabled = false;
-            GetComponent<BoxCollider2D>().enabled = false;
-        }
+            if (countDownTimer < 0f)
+            {
+                GetComponent<Renderer>().enabled = false;
+                GetComponent<BoxCollider2D>().enabled = false;
+            }
 
-        if (playerEnter == true)
-        {
-            countDownTimer -= 1 * Time.deltaTime;
-        }
+            if (playerEnter == true)
+            {
+                countDownTimer -= 1 * Time.deltaTime;
+            }
 
-        if (playerEnter == false)
-        {
-            GetComponent<Renderer>().enabled = true;
-            GetComponent<BoxCollider2D>().enabled = true;
-        }
+            if (playerEnter == false)
+            {
+                GetComponent<Renderer>().enabled = true;
+                GetComponent<BoxCollider2D>().enabled = true;
+            }
 
-        print(countDownTimer);
+            print(countDownTimer);
+        }
     }
 }
