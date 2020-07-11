@@ -20,7 +20,7 @@ public class PlatformManager : MonoBehaviour
         index = Random.Range(0, platforms.Length); // randomly selects one platform
         currentPlatform = platforms[index]; // registers random platform as the one the player must get to
         print(currentPlatform.name); // Prints name for debug purposes
-        currentPlatCol.transform.position = new Vector2 (currentPlatform.transform.position.x, currentPlatform.transform.position.y + .25f); // Moves collission to platform and adds height
+        currentPlatCol.transform.position = new Vector2 (currentPlatform.transform.position.x, currentPlatform.transform.position.y + .45f); // Moves collission to platform and adds height
                                                                                                                                              // to make it only reachable from the top
     }
 
@@ -29,6 +29,6 @@ public class PlatformManager : MonoBehaviour
     {
       index = Random.Range(0, platforms.Length);
       currentPlatform = platforms[index];
-      currentPlatCol.transform.position = new Vector2(currentPlatform.transform.position.x, currentPlatform.transform.position.y + .25f);
+      currentPlatCol.transform.position = new Vector2(currentPlatform.transform.position.x, currentPlatform.transform.position.y + .45f);
     }
 }
