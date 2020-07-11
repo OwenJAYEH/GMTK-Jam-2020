@@ -21,7 +21,7 @@ public class SlowMotion : MonoBehaviour
         startMass = rb2d.mass;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (frozen)
         {
@@ -35,7 +35,7 @@ public class SlowMotion : MonoBehaviour
 
     void SlowMo()
     {
-        rb2d.gravityScale = 0;
+        rb2d.gravityScale = 0.15f;
 
         if (slowMoBool)
         {
