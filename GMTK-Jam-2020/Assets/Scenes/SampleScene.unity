@@ -3009,7 +3009,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlatCol: {fileID: 307152781}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> efa1fb4102b6a46c61ce823a95f3964054cb7c46:GMTK-Jam-2020/Assets/Scenes/Game.unity
+=======
+  DropEvent: 0
+  PlatformDropScript: {fileID: 103210427}
+>>>>>>> parent of ddceca0... Drop Event Finalized
 =======
   DropEvent: 0
   PlatformDropScript: {fileID: 103210427}
