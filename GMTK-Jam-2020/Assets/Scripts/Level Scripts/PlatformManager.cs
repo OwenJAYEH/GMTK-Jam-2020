@@ -13,7 +13,6 @@ public class PlatformManager : MonoBehaviour
 
     // GameObject for the collision of currently selected platform
     public GameObject currentPlatCol;
-    public GameObject currentPlatLight;
 
 
     // Start is called before the first frame update
@@ -23,8 +22,7 @@ public class PlatformManager : MonoBehaviour
         index = Random.Range(0, platforms.Length); // randomly selects one platform
         currentPlatform = platforms[index]; // registers random platform as the one the player must get to
         print(currentPlatform.name); // Prints name for debug purposes
-        currentPlatCol.transform.position = new Vector2 (currentPlatform.transform.position.x, currentPlatform.transform.position.y + .45f); // Moves collission to platform and adds height                                                                                                                                    
-        currentPlatLight.transform.position = currentPlatCol.transform.position;                                                            // to make it only reachable from the top
+        currentPlatCol.transform.position = new Vector2 (currentPlatform.transform.position.x, currentPlatform.transform.position.y + .45f); // Moves collission to platform and adds height                                                                                                                                    // to make it only reachable from the top
     }
 
     // Function repeats the process above
@@ -33,7 +31,6 @@ public class PlatformManager : MonoBehaviour
       index = Random.Range(0, platforms.Length);
       currentPlatform = platforms[index];
       currentPlatCol.transform.position = new Vector2(currentPlatform.transform.position.x, currentPlatform.transform.position.y + .45f);
-      currentPlatLight.transform.position = currentPlatCol.transform.position;
     }
 
     void Update()

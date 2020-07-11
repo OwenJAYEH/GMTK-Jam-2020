@@ -10,9 +10,8 @@ public class PlatformDrop : MonoBehaviour
 
     public void StartOver()
     {
-        countDownTimer = -3f;
+        countDownTimer = 0f;
     }
-
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D col)
     {
