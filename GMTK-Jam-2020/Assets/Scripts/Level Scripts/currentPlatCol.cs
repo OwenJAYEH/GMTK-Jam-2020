@@ -6,9 +6,11 @@ using UnityEngine;
 public class currentPlatCol : MonoBehaviour
 {
     public PlatformManager PlatformManagerScript;
+    public GameManagerScript GameManager;
 
     bool playerOneGoal = false;
     bool playerTwoGoal = false;
+
 
     // Function makes booleans true when Player One or Player Two is colliding with the goal
     void OnTriggerEnter2D(Collider2D col)
@@ -45,6 +47,9 @@ public class currentPlatCol : MonoBehaviour
         if (playerTwoGoal == true && playerOneGoal == true)
         {
             PlatformManagerScript.NewPlatform();
+            GameManager.AddPoint();
+            playerTwoGoal = false;
+            playerOneGoal = false;
         }
     }
 }
