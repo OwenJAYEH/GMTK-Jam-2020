@@ -12,6 +12,9 @@ public class PlatformManager : MonoBehaviour
     // GameObject for the collision of currently selected platform
     public GameObject currentPlatCol;
 
+    public bool DropEvent = false;
+    public PlatformDrop PlatformDropScript;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,5 +33,13 @@ public class PlatformManager : MonoBehaviour
       index = Random.Range(0, platforms.Length);
       currentPlatform = platforms[index];
       currentPlatCol.transform.position = new Vector2(currentPlatform.transform.position.x, currentPlatform.transform.position.y + .45f);
+    }
+
+    void Update()
+    {
+        if (DropEvent == true)
+        {
+            PlatformDropScript.DropEventToggle();
+        }
     }
 }
